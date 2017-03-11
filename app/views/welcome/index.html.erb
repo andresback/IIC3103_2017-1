@@ -1,9 +1,15 @@
 <h2>Hello World</h2>
 
-
+<% @news.each do |n| %>
 <p>
-  <% @news.each do |n| %>
-  Title: <%= n.title %>
 
-      <% end %>
+  Title: <%= n.title %>
+</p><p>
+
+  Subtitle: <%= n.subtitle %>
+</p><p>
+  Body: <%= n.body.truncate(1000, separator: ' ') %>
+
 </p>
+
+<% end %>
